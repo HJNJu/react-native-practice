@@ -20,8 +20,14 @@ export default function App() {
   const [text, setText] = useState("");
   const [toDos, setToDos] = useState({});
 
-  const life = () => setWorking(false);
-  const work = () => setWorking(true);
+  const life = () => {
+    setWorking(false)
+    setText("");
+  };
+  const work = () => {
+    setWorking(true);
+    setText("");
+  };
 
   const onChangeText = (payload) => setText(payload);
 
